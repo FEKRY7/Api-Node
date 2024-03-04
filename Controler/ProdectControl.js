@@ -13,7 +13,7 @@ const one = async(req,res)=>{
        if(!titank){
         httperespons.First(res,[],200,HTTP.FAIL)
        }else{
-        httperespons.Second(res,[titank],200,HTTP.SUCCESS) 
+        httperespons.Second(res,titank,200,HTTP.SUCCESS) 
        }
     }catch(error) {
         console.error('Error in one:', error);
@@ -31,7 +31,7 @@ const tow = async(req,res)=>{
        if(!titank){
         httperespons.First(res,[],200,HTTP.FAIL)
        }else{
-        httperespons.Second(res,[titank],200,HTTP.SUCCESS) 
+        httperespons.Second(res,titank,200,HTTP.SUCCESS) 
        }
     }catch(error) {
         console.error('Error in tow:', error);
@@ -82,7 +82,7 @@ new AppError('your are not logged in, please login to gain access,401')
                  if(!titank){
                             httperespons.First(res,[],200,HTTP.FAIL)
                            }else{
-                            httperespons.Second(res,[titank],200,HTTP.SUCCESS) 
+                            httperespons.Second(res,titank,200,HTTP.SUCCESS) 
                            }
                 }else{         
                    httperespons.First(res,['pleas login as Admin'],200,HTTP.FAIL)
